@@ -1,6 +1,6 @@
 # Suncom
 
-> A Node.jsweb app that bridges the gap between  society and industry
+> A web app that bridges the gap between  society and industry
 
 ## Features
 

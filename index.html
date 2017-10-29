@@ -45,7 +45,7 @@
 			</header><!-- /intro -->
 			<section class="items-wrap">
 				<a href="http://suncom.dev/project.html" class="item">
-					<img class="item__image" src="img/projects.jpg" alt="item01"/>
+					<img id="sunwayproject" class="item__image" src="img/projects.jpg" alt="item01"/>
 					<h2 class="item__title">Sunway Projects</h2>
 				</a>
 					<a href="www.google.com" class="item">
@@ -53,12 +53,12 @@
 					<h2 class="item__title"> Shuttle Bus</h2>
 				</a>
 					<a href="soncom.dev/project.html" class="item">
-					<img class="item__image" src="img/parking.jpg" alt="item03"/>
-					<h2 class="item__title">Parking</h2>
+					<img class="item__image" src="img/news.jpg" alt="item03"/>
+					<h2 class="item__title">News</h2>
 				</a>
 					<a href="#" class="item">
-					<img class="item__image" src="img/pals.png" alt="item04"/>
-					<h2 class="item__title">Sunway Pals</h2>
+					<img class="item__image" src="img/report.jpg" alt="item04"/>
+					<h2 class="item__title">Report</h2>
 				</a>
 					<a href="#" class="item">
 					<img class="item__image" src="img/volunteering.png" alt="item05"/>
@@ -76,7 +76,8 @@
 		<script>
 			(function() {
 				var container = document.getElementById( 'container' ),
-					trigger = container.querySelector( 'button.trigger' );
+					trigger = container.querySelector( 'button.trigger' ),
+					pages = document.getElementById('sunwayproject');
 
 				function toggleContent() {
 					if( classie.has( container, 'container--open' ) ) {
@@ -95,12 +96,18 @@
 					window.scrollTo( 0, 0 );
 				}
 
+				function changePage(){
+					window.location.href = 'http://suncom.dev/project.html';
+				}
+
 				document.body.scrollTop = document.documentElement.scrollTop = 0;
 
 				window.addEventListener( 'scroll', noscroll );
 
 				trigger.addEventListener( 'click', toggleContent );
 				[].slice.call( document.querySelectorAll('.items-wrap a') ).forEach( function(el) { el.onclick = function() { return false; } } );
+
+				  pages.addEventListener('click', changePage);
 			})();
 		</script>
 	</body>
